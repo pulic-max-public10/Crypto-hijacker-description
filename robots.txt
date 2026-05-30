@@ -1,0 +1,36 @@
+# robots.txt — Cryptowallethijiker
+# https://yoursite.com/robots.txt
+
+# ── Allow all reputable crawlers ───────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# ── Global rules ───────────────────────────────────────
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /sitemap.xml
+
+# Block non-public paths
+Disallow: /admin/
+Disallow: /static/private/
+Disallow: /.env
+Disallow: /config/
+Disallow: /__pycache__/
+Disallow: /health
+
+# ── Crawl delay for unknown bots ───────────────────────
+User-agent: *
+Crawl-delay: 10
+
+# ── Sitemap location ───────────────────────────────────
+Sitemap: https://yoursite.com/sitemap.xml
